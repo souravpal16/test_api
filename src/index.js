@@ -11,6 +11,10 @@ app.get('/about', (req, res)=>{
     res.send({"result":"Welcome to about endpoint"});
 });
 
+app.get('/user', (req, res)=>{
+    res.send({"how to use": "Just try to add /user/{username} and see the magic."});
+});
+
 app.get('/user/:username', (req, res) => {
     const username = req.params.username;
     res.send({"result":`Welcome user: ${username}`});
